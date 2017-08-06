@@ -14,10 +14,10 @@ function update_cygwin_instance() {
 		local current_cygwin_version=$( get_current_cygwin_version )
 		local current_cygwin_version_number=$( get_version_as_number $current_cygwin_version )
 		echo -e "Checking Cygwin version:"
-		echo "  installed [$current_cygwin_version]"
-		echo "  newest    [$newest_cygwin_version]"
-		if [[ $newest_cygwin_version_number -gt $current_cygwin_version_number ]]; then
-			echo "Cygwin is outdated"
+		#echo "  installed [$current_cygwin_version]"
+		#echo "  newest    [$newest_cygwin_version]"
+		#if [[ $newest_cygwin_version_number -gt $current_cygwin_version_number ]]; then
+		#	echo "Cygwin is outdated"
 			local babun_root=$( cygpath -ma "/" | sed "s#/cygwin##g" ) 
 			local running_count=$( ps | grep /usr/bin/mintty | wc -l )
 			if [[ $running_count -gt 1 ]]; then
@@ -43,7 +43,7 @@ function update_cygwin_instance() {
 		else
 			echo "Cygwin is up to date" 
 		fi		
-	fi
+	#fi
 
 }
 
