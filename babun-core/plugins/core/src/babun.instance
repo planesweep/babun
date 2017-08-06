@@ -4,3 +4,4 @@ babun_plugins="$babun/source/babun-core/plugins"
 babun_tools="$babun/source/babun-core/tools"
 homedir=~
 eval 'homedir="$homedir"'
+BABUN_BRANCH=master
